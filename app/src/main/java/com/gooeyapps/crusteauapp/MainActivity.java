@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_productes) {
             Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);v
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
