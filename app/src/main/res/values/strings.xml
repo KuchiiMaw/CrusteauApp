@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CrusteauApp</string>
+    <string name="app_name">Crusteau</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">Map</string>
+    <string name="nosaltres">Who are we?</string>
+    <string name="localitzacio">Where are we?</string>
+    <string name="productes">What do we offer?</string>
     <string name="descripcion">
         The traditional Crusteau Bread bakery is the project started by Ignasi Perez-Noguera, the result of the passion and dedication to the job and the product, and the desire to give people of Tarragona a pan of what feel proud.\n
         \nFrom the culture of the autoabastiment and diy, perfecting techniques in England and discovering ancient cereals lenaris in South America, with a scientific vision and a letter Crusteau craftsman is a obrador of bread where the only ingredients are flour, water, salt and time. Organic flours, many at stone mill, refined and not salt dough (no added yeast), with a fully manual do a quality of high nutritional value, easy to digest.\n

@@ -4,20 +4,20 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item android:title="L'APP DE CRUSTEAU">
+        <item android:title="@string/app_name">
             <menu>
                 <item
                     android:id="@+id/nav_main"
                     android:icon="@drawable/ic_menu_camera"
-                    android:title="Qui som?" />
+                    android:title="@string/nosaltres" />
                 <item
                     android:id="@+id/nav_mapa"
                     android:icon="@drawable/ic_menu_gallery"
-                    android:title="On som?" />
+                    android:title="@string/localitzacio" />
                 <item
                     android:id="@+id/nav_productes"
                     android:icon="@drawable/ic_menu_slideshow"
-                    android:title="Què oferim?" />
+                    android:title="@string/productes" />
             </menu>
         </item>
     </group>
