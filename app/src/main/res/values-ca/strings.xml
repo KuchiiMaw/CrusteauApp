@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Crusteau</string>
+    <string name="navigation_drawer_open">Obrir el navegador</string>
+    <string name="navigation_drawer_close">Tancar el navegador</string>
+    <string name="action_settings">Opcions</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="nosaltres">Qui som?</string>
+    <string name="localitzacio">On som?</string>
+    <string name="productes">Què oferim?</string>
+    <string name="descripcion">
+        L\'obrador artesanal de pa Crusteau es el projecte iniciat per l\'Ignasi Perez-Noguera, fruit de la passió i dedicació per l\'ofici i producte, i la voluntat de donar a la gent de Tarragona un pa del que sentir-se orgullosos.\n
+        \nProvinent de la cultura de l\'autoabastiment i diy, perfeccionant técniques a Anglaterra i descobrint cereals mil.lenaris a Sudamèrica, amb una visió científica i un caracter artesà Crusteau es un obrador de pa on els únics ingredients son farina, aigua, sal i temps.\n
+        \nFarines ecològiques, moltes a molí de pedra, sal no refinada i massa mare (sense llevats afegits), amb un procés totalment manual fem un pa de qualitat d'alt valor nutricional, fàcil de digerir.\n
+        \nUn pa honest, pa de veritat.
+    </string>
+</resources>

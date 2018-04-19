@@ -5,6 +5,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -37,8 +39,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        final LatLng coordenades = new LatLng(41.315132, 1.269627);
-        MarkerOptions marker = new MarkerOptions().position(coordenades).title("Papereria Jordi Fort");
+        final LatLng coordenades = new LatLng(41.118076, 1.258232);
+        MarkerOptions marker = new MarkerOptions().position(coordenades);
+        marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_map));
         mMap.addMarker(marker);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(coordenades));
 
@@ -46,7 +49,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
             public void onMapLoaded() {
                 mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
                         .target(coordenades)
-                        .zoom(17)
+                        .zoom(16)
                         .build()));
             }
         });
