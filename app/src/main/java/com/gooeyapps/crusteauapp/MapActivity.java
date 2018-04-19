@@ -41,7 +41,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
         final LatLng coordenades = new LatLng(41.118076, 1.258232);
         MarkerOptions marker = new MarkerOptions().position(coordenades);
-        marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon));
+        marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_map));
         mMap.addMarker(marker);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(coordenades));
 

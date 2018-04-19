@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CrusteauApp</string>
+    <string name="navigation_drawer_open">Abre el navegador</string>
+    <string name="navigation_drawer_close">Cerrar el navegador</string>
+    <string name="action_settings">Opciones</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="descripcion">La panadería tradicional Crusteau es el proyecto iniciado por Ignasi Pérez-Noguera, fruto de la pasión y dedicación al trabajo y el producto, y el deseo de dar a la gente de Tarragona un pan de lo que se siente orgulloso.\n
+        \nDesde la cultura del autoabastiment y el bricolaje, perfeccionando las técnicas en Inglaterra y descubriendo los antiguos cereales lenaris en Sudamérica, con una visión científica y una carta Crusteau artesano es un Obrador de pan donde los únicos ingredientes son la harina, el agua, la sal y el tiempo.\n
+        \nLas harinas orgánicas, muchas en el molino de piedra, refinado y no la masa de sal (ninguna levadura agregada), con un completamente manual hacen una calidad del alto valor alimenticio, fácil digerir.\n
+        \nUn pan honesto y real.</string>
+</resources>
