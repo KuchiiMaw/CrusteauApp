@@ -1,26 +1,39 @@
 package com.gooeyapps.crusteauapp;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
+import java.util.ArrayList;
+import java.util.List;
+
+public class Productes extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    //Llista
+    private List<Products> llista;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_productes);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -32,6 +45,64 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //llista
+        llista = new ArrayList<Products>();
+        llista.add(new Products("1","Baguette","baguette","És una barra molt gran","1€"));
+        llista.add(new Products("2","Camut integral","camut_integral","És una camut","2€"));
+        llista.add(new Products("3","Coca","coca","És una coca","3€"));
+
+        AdapterProductes adapterProductes = new AdapterProductes(this);
+        ListView listView = (ListView)findViewById(R.id.listProductes);
+        listView.setAdapter(adapterProductes);
+
+    }
+
+    class AdapterProductes extends ArrayAdapter<Products>{
+
+        AppCompatActivity appCompatActivity;
+        AdapterProductes(AppCompatActivity context){
+            super(context, R.layout.products, llista);
+            appCompatActivity = context;
+        }
+
+        public View getView(int position, View convertView, ViewGroup parent){
+            LayoutInflater inflater = appCompatActivity.getLayoutInflater();
+            View item = inflater.inflate(R.layout.products,null);
+
+            //Nom del producte
+            TextView nom = (TextView)item.findViewById(R.id.nomTxT);
+            nom.setText(llista.get(position).getNom());
+
+            //Informació del producte
+            TextView informacio = (TextView)item.findViewById(R.id.informacioTxT);
+            informacio.setText(llista.get(position).getInformacio());
+
+            //Preu del producte
+            TextView preu = (TextView)item.findViewById(R.id.preuTxT);
+            preu.setText(llista.get(position).getPreu());
+
+            //IMATGE del producte
+            ImageView imageView = (ImageView)item.findViewById(R.id.imatgeProducte);
+            int id = getResources().getIdentifier(llista.get(position).getImatge(),"drawable",getPackageName());
+            imageView.setImageResource(id);
+
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                   inte();
+                }
+            });
+
+            return item;
+        }
+
+
+    }
+
+    public void inte(){
+        Toast.makeText(this, "This is my Toast message!",
+                Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -47,7 +118,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.productes, menu);
         return true;
     }
 
@@ -64,6 +135,7 @@ public class MainActivity extends AppCompatActivity
         }*/
 
         return super.onOptionsItemSelected(item);
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
