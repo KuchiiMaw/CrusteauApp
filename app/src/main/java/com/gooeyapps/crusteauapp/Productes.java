@@ -66,7 +66,7 @@ public class Productes extends AppCompatActivity
             appCompatActivity = context;
         }
 
-        public View getView(int position, View convertView, ViewGroup parent){
+        public View getView(final int position, View convertView, ViewGroup parent){
             LayoutInflater inflater = appCompatActivity.getLayoutInflater();
             View item = inflater.inflate(R.layout.products,null);
 
@@ -83,14 +83,14 @@ public class Productes extends AppCompatActivity
             preu.setText(llista.get(position).getPreu());
 
             //IMATGE del producte
-            ImageView imageView = (ImageView)item.findViewById(R.id.imatgeProducte);
-            int id = getResources().getIdentifier(llista.get(position).getImatge(),"drawable",getPackageName());
+            final ImageView imageView = (ImageView)item.findViewById(R.id.imatgeProducte);
+            final int id = getResources().getIdentifier(llista.get(position).getImatge(),"drawable",getPackageName());
             imageView.setImageResource(id);
 
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                   inte();
+                   mostrarDades(position);
                 }
             });
 
@@ -100,9 +100,15 @@ public class Productes extends AppCompatActivity
 
     }
 
-    public void inte(){
-        Toast.makeText(this, "This is my Toast message!",
-                Toast.LENGTH_LONG).show();
+    //Mètode per saber quina foto s'ha clicat i ens portara a un layout mostrant la informació de forma més visual.
+    public void mostrarDades(int position){
+        /*Toast.makeText(this, "This is my Toast message! "+position,
+                Toast.LENGTH_LONG).show();*/
+
+        Intent intent = new Intent(this, ProductActivity.class);
+        intent.putExtra("position",position);
+        startActivity(intent);
+
     }
 
     @Override
