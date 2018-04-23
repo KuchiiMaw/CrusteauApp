@@ -33,7 +33,7 @@ public class ProductActivity extends AppCompatActivity {
         switch (position){
             case 0:
                 imageView.setImageResource(R.drawable.baguette);
-                descripcio.setText("El baguet i la descripcio de ");
+                descripcio.setText("");
                 break;
             case 1:
                 imageView.setImageResource(R.drawable.camut_integral);
