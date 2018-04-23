@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, MapActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_productes) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, Productes.class);
             startActivity(intent);
         }
 

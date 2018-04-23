@@ -13,4 +13,11 @@
         \nFrom the culture of the autoabastiment and diy, perfecting techniques in England and discovering ancient cereals lenaris in South America, with a scientific vision and a letter Crusteau craftsman is a obrador of bread where the only ingredients are flour, water, salt and time. Organic flours, many at stone mill, refined and not salt dough (no added yeast), with a fully manual do a quality of high nutritional value, easy to digest.\n
         \nAn honest, real bread.
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_productes">Productes</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
 </resources>
