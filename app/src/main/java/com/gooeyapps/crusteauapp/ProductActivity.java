@@ -5,14 +5,14 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class ProductActivity extends AppCompatActivity {
-    ImageView imatge;
-    TextView descripcio;
-    Resources res;
+    public ImageView imageView;
+    public TextView descripcio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,36 +23,30 @@ public class ProductActivity extends AppCompatActivity {
         int position = intent.getIntExtra("position",0);
         mostrar(position);
 
-         imatge = (ImageView)findViewById(R.id.imgImatge);
-         descripcio = (TextView)findViewById(R.id.descripcio);
-
     }
 
 
     public void mostrar(int position){
-        Toast.makeText(this, "This is my Toast message! "+position ,
-                Toast.LENGTH_LONG).show();
+        descripcio = (TextView)findViewById(R.id.descripcio);
+        imageView = (ImageView)findViewById(R.id.foto);
 
         switch (position){
             case 0:
-                Toast.makeText(this, "This is my Toast message! "+position ,
-                        Toast.LENGTH_LONG).show();
-
-                imatge.setImageDrawable(getResources().getDrawable(R.drawable.baguette));
-                //imatge.setImageResource(R.drawable.baguette);
-                //imatge.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.baguette));
-                /*descripcio.setText("La baguette a la Jose de \n" +
-                        "Crusteau és molt bona.");*/
-
+                imageView.setImageResource(R.drawable.baguette);
+                descripcio.setText("El baguet i la descripcio de ");
+                break;
             case 1:
-                //imatge.setImageResource(R.drawable.camut_integral);
-                descripcio.setText("El camut integral a la Jose de \n" +
-                        "Crusteau és molt bona.");
+                imageView.setImageResource(R.drawable.camut_integral);
+                descripcio.setText("El camut integral a la Jaumee de ");
+
+                break;
 
             case 2:
-                //imatge.setImageResource(R.drawable.coca);
-                descripcio.setText("La coca a la Jose de \n" +
-                        "Crusteau és molt bona.");
+                imageView.setImageResource(R.drawable.coca);
+                descripcio.setText("La coca integral a la Jose de ");
+                break;
+
+
         }
 
 
