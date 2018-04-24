@@ -6,6 +6,7 @@ public class Products {
     private String imatge;
     private String informacio;
     private String preu;
+    private String quantitat;
 
     //constructor
     public Products(String id_producte, String nom, String imatge, String informacio, String preu) {
@@ -14,6 +15,7 @@ public class Products {
         this.imatge = imatge;
         this.informacio = informacio;
         this.preu = preu;
+        quantitat="0";
     }
 
     //metodes
@@ -57,5 +59,13 @@ public class Products {
 
     public void setPreu(String preu) {
         this.preu = preu;
+    }
+
+    public String getQuantitat() {
+        return quantitat;
+    }
+
+    public void setQuantitat(String quantitat) {
+        this.quantitat = quantitat;
     }
 }

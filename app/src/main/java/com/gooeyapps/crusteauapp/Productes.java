@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Layout;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -85,9 +87,53 @@ public class Productes extends AppCompatActivity
             TextView nom = (TextView)item.findViewById(R.id.nomTxT);
             nom.setText(llista.get(position).getNom());
 
-            //Informació del producte
-            TextView informacio = (TextView)item.findViewById(R.id.informacioTxT);
-            informacio.setText(llista.get(position).getInformacio());
+            //Mostra els productes triats.
+            final TextView numeroProductes = (TextView)item.findViewById(R.id.numProductesTxT);
+            numeroProductes.setText("0");
+
+
+            //Boto Resta
+            Button resta = (Button) item.findViewById(R.id.btnResta);
+            resta.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int numero;
+                    numero = Integer.parseInt(String.valueOf(llista.get(position).getQuantitat()));
+
+                    if (numero>0) {
+                        numero--;
+                        String resultat = String.valueOf(Integer.valueOf(numero));
+                        llista.get(position).setQuantitat(resultat);
+                        numeroProductes.setText(llista.get(position).getQuantitat());
+                    }
+                }
+            });
+
+
+            //Boto Sumar
+            Button sumar = (Button) item.findViewById(R.id.btnSuma);
+            sumar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int numero;
+                    try {
+                        Log.d("1","LA variable te "+llista.get(position).getQuantitat());
+
+                        numero = Integer.parseInt(String.valueOf(llista.get(position).getQuantitat()));
+
+
+                        numero++;
+                        String resultat = String.valueOf(Integer.valueOf(numero));
+                        llista.get(position).setQuantitat(resultat);
+                        numeroProductes.setText(llista.get(position).getQuantitat());
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
+
+
+                }
+            });
 
             //Preu del producte
             TextView preu = (TextView)item.findViewById(R.id.preuTxT);
