@@ -7,9 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Layout;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +18,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +26,9 @@ public class Productes extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     //Llista
-    private List<Products> llista;
-
+    public List<Products> llista;
+    public double total=0;
+    String euros="€";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,20 +48,20 @@ public class Productes extends AppCompatActivity
 
         //Llista de productes
         llista = new ArrayList<Products>();
-        llista.add(new Products("1","Baguette","baguette","És una barra molt gran.","1€"));
-        llista.add(new Products("2","Camut integral","camut_integral","És una camut.","2€"));
-        llista.add(new Products("3","Coca","coca","És una coca.","3€"));
-        llista.add(new Products("4","Croissant","croissant","És un croissant.","4€"));
-        llista.add(new Products("5","Pa d'espelta integral","espelta_integral","És un pa d'espelta integral.","5€"));
-        llista.add(new Products("6","Fajol","fajol","És un fajol.","6€"));
-        llista.add(new Products("7","Magdalena","magdalena","És una magdalena.","7€"));
-        llista.add(new Products("8","Pa de moresc","pa_moresc","És pa de moresc.","8€"));
-        llista.add(new Products("9","Pa de motlle","pa_motlle","És pa de motlle.","9€"));
-        llista.add(new Products("10","Pa de pagès","pages","És un pa de pagès.","10€"));
-        llista.add(new Products("11","Pa rústic","rustic","És un pa rústic.","11€"));
-        llista.add(new Products("12","Pa de sègol integral","segol_integral","És pa de sègol integral","12€"));
+        llista.add(new Products("1","Baguette","baguette","És una barra molt gran.","1"));
+        llista.add(new Products("2","Camut integral","camut_integral","És una camut.","2"));
+        llista.add(new Products("3","Coca","coca","És una coca.","3"));
+        llista.add(new Products("4","Croissant","croissant","És un croissant.","4"));
+        llista.add(new Products("5","Pa d'espelta integral","espelta_integral","És un pa d'espelta integral.","5"));
+        llista.add(new Products("6","Fajol","fajol","És un fajol.","6"));
+        llista.add(new Products("7","Magdalena","magdalena","És una magdalena.","7"));
+        llista.add(new Products("8","Pa de moresc","pa_moresc","És pa de moresc.","8"));
+        llista.add(new Products("9","Pa de motlle","pa_motlle","És pa de motlle.","9"));
+        llista.add(new Products("10","Pa de pagès","pages","És un pa de pagès.","10"));
+        llista.add(new Products("11","Pa rústic","rustic","És un pa rústic.","11"));
+        llista.add(new Products("12","Pa de sègol integral","segol_integral","És pa de sègol integral","12"));
         llista.add(new Products("13","Pa 6 cereals","sis_cereals","És pa 6 cereals.","1" +
-                "3€"));
+                "3"));
 
         AdapterProductes adapterProductes = new AdapterProductes(this);
         ListView listView = (ListView)findViewById(R.id.listProductes);
@@ -91,21 +89,43 @@ public class Productes extends AppCompatActivity
             final TextView numeroProductes = (TextView)item.findViewById(R.id.numProductesTxT);
             numeroProductes.setText("0");
 
+            //Preu final
+            try {
+                TextView preufinal = (TextView)findViewById(R.id.txtPreuTotal);
+                Log.d("1","El total es:  "+total);
+                String tot = new Double(total).toString();
+                preufinal.setText("Total: "+tot);
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
 
             //Boto Resta
             Button resta = (Button) item.findViewById(R.id.btnResta);
             resta.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int numero;
-                    numero = Integer.parseInt(String.valueOf(llista.get(position).getQuantitat()));
+                    try{
+                        int numero;
+                        numero = Integer.parseInt(String.valueOf(llista.get(position).getQuantitat()));
 
-                    if (numero>0) {
-                        numero--;
-                        String resultat = String.valueOf(Integer.valueOf(numero));
-                        llista.get(position).setQuantitat(resultat);
-                        numeroProductes.setText(llista.get(position).getQuantitat());
+                        if (numero>0) {
+                            numero--;
+                            String resultat = String.valueOf(Integer.valueOf(numero));
+                            llista.get(position).setQuantitat(resultat);
+                            numeroProductes.setText(llista.get(position).getQuantitat());
+
+                            //calcular preu final
+                            calcularPreu();
+
+                        }
+
+
+                    }catch (Exception e){
+                    e.printStackTrace();
                     }
+
                 }
             });
 
@@ -118,14 +138,18 @@ public class Productes extends AppCompatActivity
                     int numero;
                     try {
                         Log.d("1","LA variable te "+llista.get(position).getQuantitat());
-
                         numero = Integer.parseInt(String.valueOf(llista.get(position).getQuantitat()));
-
-
                         numero++;
                         String resultat = String.valueOf(Integer.valueOf(numero));
                         llista.get(position).setQuantitat(resultat);
                         numeroProductes.setText(llista.get(position).getQuantitat());
+
+                        //calcular preu final
+                        calcularPreu();
+
+
+
+
                     }catch (Exception e){
                         e.printStackTrace();
                     }
@@ -137,7 +161,7 @@ public class Productes extends AppCompatActivity
 
             //Preu del producte
             TextView preu = (TextView)item.findViewById(R.id.preuTxT);
-            preu.setText(llista.get(position).getPreu());
+            preu.setText(llista.get(position).getPreu()+euros);
 
             //IMATGE del producte
             final ImageView imageView = (ImageView)item.findViewById(R.id.imatgeProducte);
@@ -151,11 +175,16 @@ public class Productes extends AppCompatActivity
                 }
             });
 
+
+
+
             return item;
         }
 
 
     }
+
+
 
     //Mètode per saber quina foto s'ha clicat i ens portara a un layout mostrant la informació de forma més visual.
     public void mostrarDades(int position){
@@ -166,6 +195,25 @@ public class Productes extends AppCompatActivity
         intent.putExtra("position",position);
         startActivity(intent);
 
+    }
+
+    //Mètode que calcula el preu final a partir de la quantitat demanada per cada producte
+    public void calcularPreu(){
+        TextView preufinal = (TextView)findViewById(R.id.txtPreuTotal);
+        Log.d("1","El total es:  "+total);
+
+        double total=0;
+        double quantitat=0;
+        double preu=0;
+
+        for (int i=0;i<llista.size();i++){
+            preu = Double.parseDouble(llista.get(i).getPreu());
+            quantitat = Double.parseDouble(llista.get(i).getQuantitat());
+            total = total + (quantitat * preu);
+        }
+
+        String tot = new Double(total).toString();
+        preufinal.setText("Total: "+tot+euros);
     }
 
     @Override

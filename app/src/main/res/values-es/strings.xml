@@ -8,8 +8,10 @@
     <string name="nosaltres">¿Quiénes somos?</string>
     <string name="localitzacio">¿Dónde estamos?</string>
     <string name="productes">¿Qué ofrecemos?</string>
-    <string name="descripcion">La panadería tradicional Crusteau es el proyecto iniciado por Ignasi Pérez-Noguera, fruto de la pasión y dedicación al trabajo y el producto, y el deseo de dar a la gente de Tarragona un pan de lo que se siente orgulloso.\n
-        \nDesde la cultura del autoabastiment y el bricolaje, perfeccionando las técnicas en Inglaterra y descubriendo los antiguos cereales lenaris en Sudamérica, con una visión científica y una carta Crusteau artesano es un Obrador de pan donde los únicos ingredientes son la harina, el agua, la sal y el tiempo.\n
-        \nLas harinas orgánicas, muchas en el molino de piedra, refinado y no la masa de sal (ninguna levadura agregada), con un completamente manual hacen una calidad del alto valor alimenticio, fácil digerir.\n
-        \nUn pan honesto y real.</string>
+    <string name="descripcion">
+El obrador artesanal de pan Crusteau es el proyecto iniciado por Ignasi Pérez-Noguera, fruto de la pasión, la dedicación por el oficio, y el producto y la voluntad de dar a la gente de Tarragona un pan del que sentirse orgullosos.\n
+\nOriginario de la cultura del autoabastecimiento y el DIY, perfeccionando técnicas en Inglaterra y descubriendo cereales milenarios en Sudamérica, con una visión científica y un carácter artesano, Crusteau es un obrador de pan en el que los únicos ingredientes son harina, agua, sal y tiempo.\n
+\nUtilizando harinas ecológicas, molidas en molino de piedra, sal no refinada i masa madre (sin levaduras añadidas), con un proceso totalmente manual se hace un pan de calidad de alto valor nutricional, fácil de digerir.\n
+\nUn pan honesto, pan de verdad.
+    </string>
 </resources>

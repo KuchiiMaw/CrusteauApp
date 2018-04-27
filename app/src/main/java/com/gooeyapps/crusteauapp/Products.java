@@ -20,7 +20,6 @@ public class Products {
 
     //metodes
 
-
     public String getId_producte() {
         return id_producte;
     }
