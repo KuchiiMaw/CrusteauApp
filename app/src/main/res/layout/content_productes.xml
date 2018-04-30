@@ -43,6 +43,7 @@
             android:text="Total: 5€"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@android:color/black" />
+
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

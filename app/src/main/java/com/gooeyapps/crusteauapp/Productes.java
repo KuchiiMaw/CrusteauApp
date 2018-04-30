@@ -27,8 +27,10 @@ public class Productes extends AppCompatActivity
 
     //Llista
     public List<Products> llista;
-    public double total=0;
+    public double total;
     String euros="€";
+    TextView preufinal;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,17 @@ public class Productes extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Preu final
+        try {
+            preufinal = (TextView)findViewById(R.id.txtPreuTotal);
+            Log.d("1","El total es:  "+total);
+            String tot = new Double(total).toString();
+            preufinal.setText("Total: "+tot);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
         //Llista de productes
         llista = new ArrayList<Products>();
@@ -87,18 +100,7 @@ public class Productes extends AppCompatActivity
 
             //Mostra els productes triats.
             final TextView numeroProductes = (TextView)item.findViewById(R.id.numProductesTxT);
-            numeroProductes.setText("0");
-
-            //Preu final
-            try {
-                TextView preufinal = (TextView)findViewById(R.id.txtPreuTotal);
-                Log.d("1","El total es:  "+total);
-                String tot = new Double(total).toString();
-                preufinal.setText("Total: "+tot);
-
-            }catch (Exception e){
-                e.printStackTrace();
-            }
+            numeroProductes.setText(llista.get(position).getQuantitat());
 
 
             //Boto Resta
@@ -146,7 +148,6 @@ public class Productes extends AppCompatActivity
 
                         //calcular preu final
                         calcularPreu();
-
 
 
 
@@ -199,17 +200,17 @@ public class Productes extends AppCompatActivity
 
     //Mètode que calcula el preu final a partir de la quantitat demanada per cada producte
     public void calcularPreu(){
-        TextView preufinal = (TextView)findViewById(R.id.txtPreuTotal);
         Log.d("1","El total es:  "+total);
 
-        double total=0;
-        double quantitat=0;
-        double preu=0;
+        total=0;
+       // double quantitat=0;
+        //double preu=0;
 
         for (int i=0;i<llista.size();i++){
-            preu = Double.parseDouble(llista.get(i).getPreu());
-            quantitat = Double.parseDouble(llista.get(i).getQuantitat());
-            total = total + (quantitat * preu);
+            //preu = Double.parseDouble(llista.get(i).getPreu());
+            //quantitat = Double.parseDouble(llista.get(i).getQuantitat());
+            //total = total + (quantitat * preu);
+            total = total + Double.parseDouble(llista.get(i).getPreu())* Double.parseDouble(llista.get(i).getQuantitat());
         }
 
         String tot = new Double(total).toString();
