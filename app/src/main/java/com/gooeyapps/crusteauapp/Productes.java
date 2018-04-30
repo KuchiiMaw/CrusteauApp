@@ -1,5 +1,6 @@
 package com.gooeyapps.crusteauapp;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -36,6 +37,8 @@ public class Productes extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productes);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//No permetre girar el Layout
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -216,6 +219,7 @@ public class Productes extends AppCompatActivity
         String tot = new Double(total).toString();
         preufinal.setText("Total: "+tot+euros);
     }
+
 
     @Override
     public void onBackPressed() {
