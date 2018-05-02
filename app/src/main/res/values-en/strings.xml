@@ -17,4 +17,6 @@
 
 A honest bread, true bread.
     </string>
+    <string name="preu">Price: </string>
+    <string name="quantitat">Amount: </string>
 </resources>

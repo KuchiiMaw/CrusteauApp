@@ -111,8 +111,8 @@ public class Productes extends AppCompatActivity
             resta.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    int numero;
                     try{
-                        int numero;
                         numero = Integer.parseInt(String.valueOf(llista.get(position).getQuantitat()));
 
                         if (numero>0) {
@@ -142,15 +142,17 @@ public class Productes extends AppCompatActivity
                 public void onClick(View view) {
                     int numero;
                     try {
-                        Log.d("1","LA variable te "+llista.get(position).getQuantitat());
                         numero = Integer.parseInt(String.valueOf(llista.get(position).getQuantitat()));
-                        numero++;
-                        String resultat = String.valueOf(Integer.valueOf(numero));
-                        llista.get(position).setQuantitat(resultat);
-                        numeroProductes.setText(llista.get(position).getQuantitat());
 
-                        //calcular preu final
-                        calcularPreu();
+                        if (numero<100) {
+                            numero++;
+                            String resultat = String.valueOf(Integer.valueOf(numero));
+                            llista.get(position).setQuantitat(resultat);
+                            numeroProductes.setText(llista.get(position).getQuantitat());
+
+                            //calcular preu final
+                            calcularPreu();
+                        }
 
 
 
