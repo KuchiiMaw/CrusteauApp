@@ -15,4 +15,16 @@ L\’obrador de pa artesanal de pa Crusteau es el projecte iniciat per l\'Ignasi
     </string>
     <string name="preu">Preu: </string>
     <string name="quantitat">Quantitat: </string>
+    <string name="camut_integral">Kamut integral</string>
+    <string name="coca">Coca</string>
+    <string name="croissant">Croissant</string>
+    <string name="espelta_integral">Espelta integral</string>
+    <string name="fajol">Pa de fajol</string>
+    <string name="magdalena">Magdalena</string>
+    <string name="pa_moresc">Pa de moresc</string>
+    <string name="pa_motlle">Pa de motlle</string>
+    <string name="pages">Pages</string>
+    <string name="rustic">Rústic</string>
+    <string name="segol_integral">Sègol integral</string>
+    <string name="sis_cereals">Sis cereals</string>
 </resources>

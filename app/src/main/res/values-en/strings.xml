@@ -19,4 +19,16 @@ A honest bread, true bread.
     </string>
     <string name="preu">Price: </string>
     <string name="quantitat">Amount: </string>
+    <string name="camut_integral">Camut integral</string>
+    <string name="coca">Coca</string>
+    <string name="croissant">Croissant</string>
+    <string name="espelta_integral">Espelta integral</string>
+    <string name="fajol">Fajol</string>
+    <string name="magdalena">Magdalena</string>
+    <string name="pa_moresc">Pa moresc</string>
+    <string name="pa_motlle">Pa motlle</string>
+    <string name="pages">Pages</string>
+    <string name="rustic">Rustic</string>
+    <string name="segol_integral">Segol integral</string>
+    <string name="sis_cereals">Sis cereals</string>
 </resources>

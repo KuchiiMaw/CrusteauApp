@@ -26,5 +26,19 @@ A honest bread, true bread.
     <string name="nav_header_desc">Navigation header</string>
     <string name="preu">Price: </string>
     <string name="quantitat">Amount: </string>
+    <string name="baguette">Baguette</string>
+    <string name="camut_integral">Integral kamut bread</string>
+    <string name="coca">Coca</string>
+    <string name="croissant">Croissant</string>
+    <string name="espelta_integral">Integral spelt bread</string>
+    <string name="fajol">Buckwheat bread</string>
+    <string name="magdalena">Muffin</string>
+    <string name="pa_moresc">Cornbread</string>
+    <string name="pa_motlle">Bread loaf</string>
+    <string name="pages">Pages bread</string>
+    <string name="rustic">Rustic bread</string>
+    <string name="segol_integral">Integral rye bread</string>
+    <string name="sis_cereals">Six-grain bread</string>
+
 
 </resources>

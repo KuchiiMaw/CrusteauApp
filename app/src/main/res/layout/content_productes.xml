@@ -40,9 +40,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:elevation="16dp"
+            android:shadowColor="@android:color/background_light"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="10"
             android:text="Total: 5€"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:shadowDx="3" />
 
     </FrameLayout>
 

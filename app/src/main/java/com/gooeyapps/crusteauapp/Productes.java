@@ -56,7 +56,7 @@ public class Productes extends AppCompatActivity
             preufinal = (TextView)findViewById(R.id.txtPreuTotal);
             Log.d("1","El total es:  "+total);
             String tot = new Double(total).toString();
-            preufinal.setText("Total: "+tot);
+            preufinal.setText("Total: "+tot+euros);
 
         }catch (Exception e){
             e.printStackTrace();
@@ -64,19 +64,19 @@ public class Productes extends AppCompatActivity
 
         //Llista de productes
         llista = new ArrayList<Products>();
-        llista.add(new Products("1","Baguette","baguette","És una barra molt gran.","1"));
-        llista.add(new Products("2","Camut integral","camut_integral","És una camut.","2"));
-        llista.add(new Products("3","Coca","coca","És una coca.","3"));
-        llista.add(new Products("4","Croissant","croissant","És un croissant.","4"));
-        llista.add(new Products("5","Pa d'espelta integral","espelta_integral","És un pa d'espelta integral.","5"));
-        llista.add(new Products("6","Fajol","fajol","És un fajol.","6"));
-        llista.add(new Products("7","Magdalena","magdalena","És una magdalena.","7"));
-        llista.add(new Products("8","Pa de moresc","pa_moresc","És pa de moresc.","8"));
-        llista.add(new Products("9","Pa de motlle","pa_motlle","És pa de motlle.","9"));
-        llista.add(new Products("10","Pa de pagès","pages","És un pa de pagès.","10"));
-        llista.add(new Products("11","Pa rústic","rustic","És un pa rústic.","11"));
-        llista.add(new Products("12","Pa de sègol integral","segol_integral","És pa de sègol integral","12"));
-        llista.add(new Products("13","Pa 6 cereals","sis_cereals","És pa 6 cereals.","1" +
+        llista.add(new Products("1",this.getString(R.string.baguette),"baguette","És una barra molt gran.","1"));
+        llista.add(new Products("2",this.getString(R.string.camut_integral),"camut_integral","És una camut.","2"));
+        llista.add(new Products("3",this.getString(R.string.coca),"coca","És una coca.","3"));
+        llista.add(new Products("4",this.getString(R.string.croissant),"croissant","És un croissant.","4"));
+        llista.add(new Products("5",this.getString(R.string.espelta_integral),"espelta_integral","És un pa d'espelta integral.","5"));
+        llista.add(new Products("6",this.getString(R.string.fajol),"fajol","És un fajol.","6"));
+        llista.add(new Products("7",this.getString(R.string.magdalena),"magdalena","És una magdalena.","7"));
+        llista.add(new Products("8",this.getString(R.string.pa_moresc),"pa_moresc","És pa de moresc.","8"));
+        llista.add(new Products("9",this.getString(R.string.pa_motlle),"pa_motlle","És pa de motlle.","9"));
+        llista.add(new Products("10",this.getString(R.string.pages),"pages","És un pa de pagès.","10"));
+        llista.add(new Products("11",this.getString(R.string.rustic),"rustic","És un pa rústic.","11"));
+        llista.add(new Products("12",this.getString(R.string.segol_integral),"segol_integral","És pa de sègol integral","12"));
+        llista.add(new Products("13",this.getString(R.string.sis_cereals),"sis_cereals","És pa 6 cereals.","1" +
                 "3"));
 
         AdapterProductes adapterProductes = new AdapterProductes(this);
