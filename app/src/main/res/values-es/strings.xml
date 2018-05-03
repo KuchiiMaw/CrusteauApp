@@ -16,4 +16,16 @@ El obrador artesanal de pan Crusteau es el proyecto iniciado por Ignasi Pérez-N
     </string>
     <string name="preu">Precio: </string>
     <string name="quantitat">Cantidad: </string>
+    <string name="camut_integral">Kamut integral</string>
+    <string name="coca">Coca</string>
+    <string name="croissant">Croissant</string>
+    <string name="espelta_integral">Espelta integral</string>
+    <string name="fajol">Alforfón</string>
+    <string name="magdalena">Magdalena</string>
+    <string name="pa_moresc">Pan de maíz</string>
+    <string name="pa_motlle">Pan de molde</string>
+    <string name="pages">Pan de pagés</string>
+    <string name="rustic">Rústico</string>
+    <string name="segol_integral">Ségola integral</string>
+    <string name="sis_cereals">Seis cereales</string>
 </resources>

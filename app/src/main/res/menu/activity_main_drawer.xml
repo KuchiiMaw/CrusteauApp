@@ -8,7 +8,7 @@
             <menu>
                 <item
                     android:id="@+id/nav_main"
-                    android:icon="@drawable/ic_menu_camera"
+                    android:icon="@drawable/baguette"
                     android:title="@string/nosaltres" />
                 <item
                     android:id="@+id/nav_mapa"
