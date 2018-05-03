@@ -8,11 +8,13 @@
     <string name="nosaltres">Qui som?</string>
     <string name="localitzacio">On som?</string>
     <string name="productes">Què oferim?</string>
-    <string name="descripcion">
-L\’obrador de pa artesanal de pa Crusteau es el projecte iniciat per l\'Ignasi Pérez-Noguera, fruit de la passió, la dedicació per l\'ofici i producte, i la voluntat de donar a la gent de Tarragona un pa del que sentir-se orgullosos.\n
-\nProvinent de la cultura de l\'auto-abastiment i el DIY, perfeccionant tècniques a Anglaterra i descobrint cereals mil·lenaris a Sudamèrica, amb una visió científica i un caràcter artesà, Crusteau es un obrador de pa en el que els únics ingredients són farina, aigua, sal i temps.\nFarines ecològiques, móltes a molí de pedra, sal no refinada i massa mare (sense llevats afegits), amb un procés totalment manual es fa un pa de qualitat d'alt valor nutricional, fàcil de digerir.\n
-\nUn pa honest, pa de veritat.
-    </string>
+    <string name="descripcionA">
+        L\’obrador de pa artesanal de pa Crusteau es el projecte iniciat per l\'Ignasi Pérez-Noguera, fruit de la passió, la dedicació per l\'ofici i producte, i la voluntat de donar a la gent de Tarragona un pa del que sentir-se orgullosos.</string>
+    <string name="descripcionB">
+            Provinent de la cultura de l\'auto-abastiment i el DIY, perfeccionant tècniques a Anglaterra i descobrint cereals mil·lenaris a Sudamèrica, amb una visió científica i un caràcter artesà, Crusteau es un obrador de pa en el que els únics ingredients són farina, aigua, sal i temps.</string>
+    <string name="descripcionC">
+        Farines ecològiques, móltes a molí de pedra, sal no refinada i massa mare (sense llevats afegits), amb un procés totalment manual es fa un pa de qualitat d\'alt valor nutricional, fàcil de digerir.
+            \nUn pa honest, pa de veritat.</string>
     <string name="preu">Preu: </string>
     <string name="quantitat">Quantitat: </string>
     <string name="camut_integral">Kamut integral</string>

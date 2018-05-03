@@ -8,12 +8,13 @@
     <string name="nosaltres">¿Quiénes somos?</string>
     <string name="localitzacio">¿Dónde estamos?</string>
     <string name="productes">¿Qué ofrecemos?</string>
-    <string name="descripcion">
-El obrador artesanal de pan Crusteau es el proyecto iniciado por Ignasi Pérez-Noguera, fruto de la pasión, la dedicación por el oficio, y el producto y la voluntad de dar a la gente de Tarragona un pan del que sentirse orgullosos.\n
-\nOriginario de la cultura del autoabastecimiento y el DIY, perfeccionando técnicas en Inglaterra y descubriendo cereales milenarios en Sudamérica, con una visión científica y un carácter artesano, Crusteau es un obrador de pan en el que los únicos ingredientes son harina, agua, sal y tiempo.\n
-\nUtilizando harinas ecológicas, molidas en molino de piedra, sal no refinada i masa madre (sin levaduras añadidas), con un proceso totalmente manual se hace un pan de calidad de alto valor nutricional, fácil de digerir.\n
-\nUn pan honesto, pan de verdad.
-    </string>
+    <string name="descripcionA">
+        El obrador artesanal de pan Crusteau es el proyecto iniciado por Ignasi Pérez-Noguera, fruto de la pasión, la dedicación por el oficio, y el producto y la voluntad de dar a la gente de Tarragona un pan del que sentirse orgullosos.</string>
+    <string name="descripcionB">
+        Originario de la cultura del autoabastecimiento y el DIY, perfeccionando técnicas en Inglaterra y descubriendo cereales milenarios en Sudamérica, con una visión científica y un carácter artesano, Crusteau es un obrador de pan en el que los únicos ingredientes son harina, agua, sal y tiempo.</string>
+    <string name="descripcionC">
+        Utilizando harinas ecológicas, molidas en molino de piedra, sal no refinada i masa madre (sin levaduras añadidas), con un proceso totalmente manual se hace un pan de calidad de alto valor nutricional, fácil de digerir.
+    \nUn pan honesto, pan de verdad.</string>
     <string name="preu">Precio: </string>
     <string name="quantitat">Cantidad: </string>
     <string name="camut_integral">Kamut integral</string>
