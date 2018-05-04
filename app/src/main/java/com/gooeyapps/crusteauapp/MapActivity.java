@@ -42,7 +42,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        final LatLng coordenades = new LatLng(41.118076, 1.258232);
+        final LatLng coordenades = new LatLng(41.1174634,1.2485537);
         MarkerOptions marker = new MarkerOptions().position(coordenades);
         marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_map));
         mMap.addMarker(marker);

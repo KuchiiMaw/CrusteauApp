@@ -1,6 +1,7 @@
 package com.gooeyapps.crusteauapp;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -270,6 +271,10 @@ public class Productes extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_productes) {
             Intent intent = new Intent(this, Productes.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_telf) {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:684011253"));
             startActivity(intent);
         }
 
