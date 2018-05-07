@@ -30,4 +30,10 @@
     <string name="rustic">Rustic</string>
     <string name="segol_integral">Segol integral</string>
     <string name="sis_cereals">Sis cereals</string>
+    <string name="programadors">Programmers</string>
+    <string name="programador_dia">Jose Manuel Fernández and Jaume Balañá 07-05-18</string>
+    <string name="informacion">Information</string>
+    <string name="telf">Wanna contact with us?</string>
+
+
 </resources>

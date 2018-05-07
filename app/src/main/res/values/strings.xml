@@ -38,6 +38,8 @@
     <string name="rustic">Rustic bread</string>
     <string name="segol_integral">Integral rye bread</string>
     <string name="sis_cereals">Six-grain bread</string>
-
+    <string name="programadors">Programmers</string>
+    <string name="programador_dia">Jose Manuel Fernández and Jaume Balaña 07-05-18</string>
+    <string name="informacion">Information</string>
 
 </resources>

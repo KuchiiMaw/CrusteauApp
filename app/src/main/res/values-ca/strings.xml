@@ -29,4 +29,9 @@
     <string name="rustic">Rústic</string>
     <string name="segol_integral">Sègol integral</string>
     <string name="sis_cereals">Sis cereals</string>
+    <string name="programadors">Programadors</string>
+    <string name="programador_dia">Jose Manuel Fernández i Jaume Balañá 07-05-18</string>
+    <string name="informacion">Informació</string>
+    <string name="telf">Vols contactar?</string>
+
 </resources>

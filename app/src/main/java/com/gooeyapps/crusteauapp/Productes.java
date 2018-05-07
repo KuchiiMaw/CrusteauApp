@@ -300,6 +300,9 @@ public class Productes extends AppCompatActivity
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:684011253"));
             startActivity(intent);
+        }else if(id == R.id.information){
+            Intent intent = new Intent(this, Information.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
