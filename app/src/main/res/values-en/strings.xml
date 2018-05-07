@@ -8,32 +8,38 @@
     <string name="nosaltres">Who are we?</string>
     <string name="localitzacio">Where are we?</string>
     <string name="productes">What do we offer?</string>
+    <string name="telf">Wanna contact with us?</string>
     <string name="descripcionA">
-        Handcraft bread workshop Crusteau is the project initiated by Ignasi Pérez-Noguera, rising from the passion, the dedication for the job and the product, and the will to give the people of Tarragona bread for them to be proud of.</string>
+        Artisan Bakehouse Crusteau is the project initiated by Ignasi Pérez-Noguera, rising from the passion, the dedication for the job and the product, and the will to give the people of Tarragona bread for them to be proud of.</string>
     <string name="descripcionB">
-        Coming from the culture of self-supply and DIY, honing techniques in England and discovering millenial cereals in South America, with a scientific vision and an artisan point of view, Crusteau is a bread workshop where the only ingredients needed are flour, water, salt and time.</string>
+        Coming from the culture of self-supply and DIY, honing techniques in England and discovering millennial cereals in South America, with a scientific vision and an artisan point of view, Crusteau is a bakehouse where the only ingredients needed are flour, water, salt and time.</string>
     <string name="descripcionC">
         Using ecologic flours, milled in stone mills, non-refined salt and mother dough (without additional yeast), through a completely manual process a quality bread of high nutritional value and easy to digest is made.
         \n\nA honest bread, true bread.</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_productes">Productes</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
     <string name="preu">Price: </string>
     <string name="quantitat">Amount: </string>
-    <string name="camut_integral">Camut integral</string>
+    <string name="baguette">Baguette</string>
+    <string name="camut_integral">Integral kamut bread</string>
     <string name="coca">Coca</string>
     <string name="croissant">Croissant</string>
-    <string name="espelta_integral">Espelta integral</string>
-    <string name="fajol">Fajol</string>
-    <string name="magdalena">Magdalena</string>
-    <string name="pa_moresc">Pa moresc</string>
-    <string name="pa_motlle">Pa motlle</string>
-    <string name="pages">Pages</string>
-    <string name="rustic">Rustic</string>
-    <string name="segol_integral">Segol integral</string>
-    <string name="sis_cereals">Sis cereals</string>
+    <string name="espelta_integral">Integral spelt bread</string>
+    <string name="fajol">Buckwheat bread</string>
+    <string name="magdalena">Muffin</string>
+    <string name="pa_moresc">Cornbread</string>
+    <string name="pa_motlle">Bread loaf</string>
+    <string name="pages">Pages bread</string>
+    <string name="rustic">Rustic bread</string>
+    <string name="segol_integral">Integral rye bread</string>
+    <string name="sis_cereals">Six-grain bread</string>
     <string name="programadors">Programmers</string>
-    <string name="programador_dia">Jose Manuel Fernández and Jaume Balañá 07-05-18</string>
+    <string name="programador_dia">Jose Manuel Fernández and Jaume Balaña 07-05-18</string>
     <string name="informacion">Information</string>
-    <string name="telf">Wanna contact with us?</string>
-
 
 </resources>
