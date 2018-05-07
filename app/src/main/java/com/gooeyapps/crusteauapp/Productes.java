@@ -1,6 +1,7 @@
 package com.gooeyapps.crusteauapp;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -51,6 +52,12 @@ public class Productes extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Typeface exo = Typeface.createFromAsset(getAssets(), "fonts/Exo2-Regular.otf"); //Es crea el typeface (font)
+
+        TextView txtPreuTotal = (TextView)findViewById(R.id.txtPreuTotal);
+
+        txtPreuTotal.setTypeface(exo); //S'assigna el typeface als TextView
 
         //Preu final
         try {
@@ -170,7 +177,7 @@ public class Productes extends AppCompatActivity
             TextView preu = (TextView)item.findViewById(R.id.preuTxT);
             preu.setText(llista.get(position).getPreu()+euros);
 
-            //IMATGE del producte
+            //Imatge del producte
             final ImageView imageView = (ImageView)item.findViewById(R.id.imatgeProducte);
             final int id = getResources().getIdentifier(llista.get(position).getImatge(),"drawable",getPackageName());
             imageView.setImageResource(id);
@@ -181,6 +188,23 @@ public class Productes extends AppCompatActivity
                    mostrarDades(position);
                 }
             });
+
+            //Es creen els typeface (font)
+            Typeface exoCond = Typeface.createFromAsset(getAssets(), "fonts/Exo2-RegularCondensed.otf");
+            Typeface exoCondBold = Typeface.createFromAsset(getAssets(), "fonts/Exo2-BoldCondensed.otf");
+
+            TextView nomTxt = (TextView)item.findViewById(R.id.nomTxT);
+            TextView preuTextTxt = (TextView)item.findViewById(R.id.preuTextTxT);
+            TextView preuTxt = (TextView)item.findViewById(R.id.preuTxT);
+            TextView numProductesTextTxt = (TextView)item.findViewById(R.id.numProductesTextTxT);
+            TextView numProductesTxt = (TextView)item.findViewById(R.id.numProductesTxT);
+
+            nomTxt.setTypeface(exoCondBold);//S'assigna el typeface en negreta als TextView dels títols
+            preuTextTxt.setTypeface(exoCondBold);
+            numProductesTextTxt.setTypeface(exoCondBold);
+
+            preuTxt.setTypeface(exoCond);//S'assigna el typeface regular als TextView dels valors
+            numProductesTxt.setTypeface(exoCond);
 
 
 

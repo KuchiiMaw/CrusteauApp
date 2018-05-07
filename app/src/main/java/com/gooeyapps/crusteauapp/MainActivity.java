@@ -40,7 +40,15 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Typeface exo = Typeface.createFromAsset(getAssets(), "fonts/Exo2-Regular.otf");
+        Typeface exo = Typeface.createFromAsset(getAssets(), "fonts/Exo2-Regular.otf"); //Es crea el typeface (font)
+
+        TextView quiSomA = (TextView)findViewById(R.id.textView3);
+        TextView quiSomB = (TextView)findViewById(R.id.textView);
+        TextView quiSomC = (TextView)findViewById(R.id.textView2);
+
+        quiSomA.setTypeface(exo); //S'assigna el typeface als TextView
+        quiSomB.setTypeface(exo);
+        quiSomC.setTypeface(exo);
 
     }
 
