@@ -79,7 +79,7 @@ public class Productes extends AppCompatActivity
         llista.add(new Products("5",this.getString(R.string.espelta_integral),"espelta_integral","És un pa d'espelta integral.","3.50"));
         llista.add(new Products("6",this.getString(R.string.fajol),"fajol","És un fajol.","4.90"));
         llista.add(new Products("7",this.getString(R.string.magdalena),"magdalena","És una magdalena.","1.50"));
-        llista.add(new Products("8",this.getString(R.string.pa_moresc),"pa_moresc","És pa de moresc.","8"));
+        llista.add(new Products("8",this.getString(R.string.pa_moresc),"pa_moresc","És pa de moresc.","4.50"));
         llista.add(new Products("9",this.getString(R.string.pa_motlle),"pa_motlle","És pa de motlle.","3.50"));
         llista.add(new Products("10",this.getString(R.string.pages),"pages","És un pa de pagès.","5"));
         llista.add(new Products("11",this.getString(R.string.rustic),"rustic","És un pa rústic.","2.50"));
