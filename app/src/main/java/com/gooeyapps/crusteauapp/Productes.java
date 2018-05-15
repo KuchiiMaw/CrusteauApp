@@ -85,6 +85,9 @@ public class Productes extends AppCompatActivity
         llista.add(new Products("11",this.getString(R.string.rustic),"rustic","És un pa rústic.","2.50"));
         llista.add(new Products("12",this.getString(R.string.segol_integral),"segol_integral","És pa de sègol integral","3.50"));
         llista.add(new Products("13",this.getString(R.string.sis_cereals),"sis_cereals","És pa 6 cereals.","3.50"));
+        llista.add(new Products("14",this.getString(R.string.motllo_espelta),"sense_foto","Motllo espelta","4.50"));
+        llista.add(new Products("15",this.getString(R.string.galetes_espelta),"sense_foto","Galetes espelta.","0.80"));
+
 
         AdapterProductes adapterProductes = new AdapterProductes(this);
         ListView listView = (ListView)findViewById(R.id.listProductes);

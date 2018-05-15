@@ -95,7 +95,20 @@ public class ProductActivity extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.sis_cereals);
                 descripcio.setText("Pa 6 cereals");
                 break;
+
+            case 13:
+                imageView.setImageResource(R.drawable.sense_foto);
+                descripcio.setText("Motllo d\'espelta");
+                break;
+
+            case 14:
+                imageView.setImageResource(R.drawable.sense_foto);
+                descripcio.setText("Galetes d\'espelta");
+                break;
         }
+
+
+
 
 
     }
