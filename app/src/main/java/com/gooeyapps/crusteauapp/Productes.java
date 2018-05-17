@@ -22,6 +22,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -242,11 +244,13 @@ public class Productes extends AppCompatActivity
             //preu = Double.parseDouble(llista.get(i).getPreu());
             //quantitat = Double.parseDouble(llista.get(i).getQuantitat());
             //total = total + (quantitat * preu);
+
             total = total + Double.parseDouble(llista.get(i).getPreu())* Double.parseDouble(llista.get(i).getQuantitat());
+            total = (double)Math.round(total*1000d)/1000d;
         }
 
         String tot = new Double(total).toString();
-        preufinal.setText("Total: "+tot+euros);
+        preufinal.setText("Total: "+tot+"0"+euros);
     }
 
 
